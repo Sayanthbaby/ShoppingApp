@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="71" id="KGk-i7-Jjw" customClass="ShoppingTableViewCell" customModule="Shopping_List_App" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="397" height="71"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="397" height="71"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="right" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3V-Qm-HxF" userLabel="increaseButton">
+                        <rect key="frame" x="357" y="20.5" width="30" height="30"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="dgE-cc-WR3"/>
+                            <constraint firstAttribute="width" constant="30" id="pl9-Fq-EE3"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                        <connections>
+                            <action selector="increaseButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bUE-TZ-hf4"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wip-WL-Z9t" userLabel="DecreaseButton">
+                        <rect key="frame" x="277" y="20.5" width="30" height="30"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="1nC-Rg-Eom"/>
+                            <constraint firstAttribute="width" constant="30" id="3Rf-0W-AeR"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                        <connections>
+                            <action selector="decreaseButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="07K-tD-c2w"/>
+                        </connections>
+                    </button>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MTo-AF-8B9" userLabel="ItemTextField">
+                        <rect key="frame" x="20" y="15.5" width="237" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="7qk-aW-fE7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nnn-xX-4pq" userLabel="QuantityLabel">
+                        <rect key="frame" x="317" y="20.5" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="aZF-Xv-0n8"/>
+                            <constraint firstAttribute="width" constant="30" id="e4E-es-pAA"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Wip-WL-Z9t" firstAttribute="leading" secondItem="MTo-AF-8B9" secondAttribute="trailing" constant="20" id="2kB-tf-TBH"/>
+                    <constraint firstItem="MTo-AF-8B9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6AI-3d-v8W"/>
+                    <constraint firstAttribute="trailing" secondItem="X3V-Qm-HxF" secondAttribute="trailing" constant="10" id="9zk-wP-xJ4"/>
+                    <constraint firstItem="Wip-WL-Z9t" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FgV-eR-GxQ"/>
+                    <constraint firstItem="Nnn-xX-4pq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HBK-56-jxg"/>
+                    <constraint firstItem="Nnn-xX-4pq" firstAttribute="leading" secondItem="Wip-WL-Z9t" secondAttribute="trailing" constant="10" id="LZR-e7-n4I"/>
+                    <constraint firstItem="X3V-Qm-HxF" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Lk8-9y-rTS"/>
+                    <constraint firstItem="X3V-Qm-HxF" firstAttribute="leading" secondItem="Nnn-xX-4pq" secondAttribute="trailing" constant="10" id="SNx-ta-icj"/>
+                    <constraint firstItem="MTo-AF-8B9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="nXj-cf-j06"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="decreaseButton" destination="Wip-WL-Z9t" id="1nj-nZ-sys"/>
+                <outlet property="increaseButton" destination="X3V-Qm-HxF" id="Apb-Bg-1RY"/>
+                <outlet property="itemTextField" destination="MTo-AF-8B9" id="Yqu-mc-kgC"/>
+                <outlet property="quantityLabel" destination="Nnn-xX-4pq" id="cDR-0G-nPO"/>
+            </connections>
+            <point key="canvasLocation" x="193.47826086956522" y="118.86160714285714"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
